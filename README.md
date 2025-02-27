@@ -10,17 +10,18 @@ This work was developed and tested under pytorch 1.12.1 with CUDA 11.6.
 Please install main dependencies as follows:
 
 ```
-conda create -n dock python=3.9
+conda create -n dock python=3.9 -y
 conda activate dock
 
-conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.6 -c pytorch -c conda-forge
+conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.6 -c pytorch -c conda-forge -y
 conda install pyg -c pyg
 
 
 pip install pyg_lib torch_scatter torch_sparse torch_cluster torch_spline_conv torch_geometric -f https://data.pyg.org/whl/torch-1.12.1+cu116.html
 
-pip install pandas biopandas dill biopandas e3nn biopython==1.80 horovod[pytorch]==0.27.0 
+pip install pandas biopandas dill biopandas e3nn biopython==1.80 
 pip install networkx==2.6.3 dgl==1.1.3 dglgo==0.0.2 dgllife==0.3.2
+pip install "numpy<2"
 ```
 
 ## Data
